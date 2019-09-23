@@ -62,11 +62,11 @@ export default Service.extend(Evented, FastBootCompatMixin, {
 
   _pollScroll() {
     if (this.get('_isFastBoot')) { return; }
-    if (window.requestAnimationFrame) {
-      this._animationFrame = requestAnimationFrame(() => this._checkScroll());
-    } else {
-      this._animationFrame = setTimeout(() => this._checkScroll(), 16);
-    }
+    // if (window.requestAnimationFrame) {
+    //   this._animationFrame = requestAnimationFrame(() => this._checkScroll());
+    // } else {
+    //   this._animationFrame = setTimeout(() => this._checkScroll(), 16);
+    // }
   },
 
   _checkScroll() {
