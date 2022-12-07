@@ -56,11 +56,11 @@ export default class ScrollActivityService extends FastBootAwareEventManagerServ
 
   _pollScroll() {
     if (this._isFastBoot) { return; }
-    if (window.requestAnimationFrame) {
-      this._animationFrame = requestAnimationFrame(() => this._checkScroll());
-    } else {
-      this._animationFrame = setTimeout(() => this._checkScroll(), 16);
-    }
+    // if (window.requestAnimationFrame) {
+    //   this._animationFrame = requestAnimationFrame(() => this._checkScroll());
+    // } else {
+    //   this._animationFrame = setTimeout(() => this._checkScroll(), 16);
+    // }
   }
 
   _checkScroll() {
